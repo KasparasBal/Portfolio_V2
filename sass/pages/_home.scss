@@ -1,7 +1,10 @@
 .section__about {
+  @include clipPath;
+
   z-index: -1;
   position: relative;
-  height: 100vh;
+  height: 40vh;
+
   background-color: $color-primary;
 
   transform: translateY(-40%);
@@ -16,8 +19,17 @@
     transform: translate(-50%, -50%);
   }
   .about__description {
+    margin-top: 8rem;
     font-size: 2rem;
     letter-spacing: 0.05rem;
     line-height: 3rem;
   }
+}
+.section__projects {
+  height: 50vh;
+  transform: translateY(-20%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 3rem;
 }
