@@ -1,0 +1,27 @@
+.nav {
+  height: 8rem;
+  padding: 2rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo-container {
+    height: 100%;
+  }
+  &__logo {
+    height: 100%;
+  }
+
+  &__links {
+    display: flex;
+    gap: 2rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: $text-primary;
+    font-size: 1.8rem;
+
+    letter-spacing: 1px;
+  }
+}

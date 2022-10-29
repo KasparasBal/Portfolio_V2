@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-v2",
+  "version": "1.0.0",
+  "description": "kasparas balys front-end portfolio",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch sass/main.scss css/output.css"
+  },
+  "keywords": [
+    "portfolio",
+    "kasparas",
+    "balys",
+    "kasparasbalys",
+    "front",
+    "end",
+    "frontend",
+    "development"
+  ],
+  "author": "Kasparas Balys",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.55.0"
+  }
+}
