@@ -42,6 +42,7 @@ body {
   overflow: hidden;
   transition: all 0.3s;
   cursor: pointer;
+  background-color: #ffffff;
 }
 .card:hover {
   height: 45rem;
@@ -106,8 +107,10 @@ body {
 
 .hero {
   clip-path: polygon(100% 0%, 0% 0%, 0% 91.67%, 1% 91.68%, 2% 91.73%, 3% 91.82%, 4% 91.93%, 5% 92.07%, 6% 92.24%, 7% 92.43%, 8% 92.64%, 9% 92.86%, 10% 93.1%, 11% 93.33%, 12% 93.57%, 13% 93.8%, 14% 94.03%, 15% 94.24%, 16% 94.43%, 17% 94.59%, 18% 94.74%, 19% 94.85%, 20% 94.93%, 21% 94.98%, 22% 95%, 23% 94.98%, 24% 94.93%, 25% 94.85%, 26% 94.73%, 27% 94.59%, 28% 94.42%, 29% 94.23%, 30% 94.02%, 31% 93.8%, 32% 93.57%, 33% 93.33%, 34% 93.09%, 35% 92.86%, 36% 92.64%, 37% 92.43%, 38% 92.24%, 39% 92.07%, 40% 91.93%, 41% 91.82%, 42% 91.73%, 43% 91.68%, 44% 91.67%, 45% 91.68%, 46% 91.74%, 47% 91.82%, 48% 91.93%, 49% 92.08%, 50% 92.25%, 51% 92.44%, 52% 92.65%, 53% 92.87%, 54% 93.1%, 55% 93.34%, 56% 93.58%, 57% 93.81%, 58% 94.03%, 59% 94.24%, 60% 94.43%, 61% 94.6%, 62% 94.74%, 63% 94.85%, 64% 94.93%, 65% 94.98%, 66% 95%, 67% 94.98%, 68% 94.93%, 69% 94.85%, 70% 94.73%, 71% 94.59%, 72% 94.42%, 73% 94.23%, 74% 94.02%, 75% 93.8%, 76% 93.56%, 77% 93.33%, 78% 93.09%, 79% 92.86%, 80% 92.63%, 81% 92.43%, 82% 92.24%, 83% 92.07%, 84% 91.93%, 85% 91.81%, 86% 91.73%, 87% 91.68%, 88% 91.67%, 89% 91.68%, 90% 91.74%, 91% 91.82%, 92% 91.94%, 93% 92.08%, 94% 92.25%, 95% 92.44%, 96% 92.65%, 97% 92.87%, 98% 93.11%, 99% 93.34%, 100% 93.58%);
-  height: 100vh;
   background-image: linear-gradient(to right bottom, #ffffff, #c7c7c7);
+  position: relative;
+  z-index: 100;
+  height: 100vh;
 }
 .hero__image {
   height: 30%;
@@ -115,7 +118,31 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: all 1s;
   filter: drop-shadow(1rem 2rem 2rem black);
+}
+.hero__title {
+  font-size: 1.5rem;
+  padding: 10rem 18rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-49%, -56%);
+  text-align: center;
+  font-weight: 300;
+  line-height: 9rem;
+  text-transform: uppercase;
+  letter-spacing: 3.3rem;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.hero__title:hover {
+  font-size: 5rem;
+  opacity: 1;
+}
+
+.bg-opacity {
+  opacity: 0;
 }
 
 .nav {
@@ -142,19 +169,36 @@ body {
   letter-spacing: 1px;
 }
 
+.sticky {
+  position: sticky;
+  z-index: 500000;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right bottom, transparent 20%, rgba(255, 255, 255, 0.2) 40%, #fafafa);
+}
+
 .footer {
-  height: 6rem;
+  height: 4rem;
   background-color: #fafafa;
-  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  color: #484848;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
 }
 
 .section__about {
   clip-path: polygon(100% 0%, 0% 0%, 0% 91.67%, 1% 91.68%, 2% 91.73%, 3% 91.82%, 4% 91.93%, 5% 92.07%, 6% 92.24%, 7% 92.43%, 8% 92.64%, 9% 92.86%, 10% 93.1%, 11% 93.33%, 12% 93.57%, 13% 93.8%, 14% 94.03%, 15% 94.24%, 16% 94.43%, 17% 94.59%, 18% 94.74%, 19% 94.85%, 20% 94.93%, 21% 94.98%, 22% 95%, 23% 94.98%, 24% 94.93%, 25% 94.85%, 26% 94.73%, 27% 94.59%, 28% 94.42%, 29% 94.23%, 30% 94.02%, 31% 93.8%, 32% 93.57%, 33% 93.33%, 34% 93.09%, 35% 92.86%, 36% 92.64%, 37% 92.43%, 38% 92.24%, 39% 92.07%, 40% 91.93%, 41% 91.82%, 42% 91.73%, 43% 91.68%, 44% 91.67%, 45% 91.68%, 46% 91.74%, 47% 91.82%, 48% 91.93%, 49% 92.08%, 50% 92.25%, 51% 92.44%, 52% 92.65%, 53% 92.87%, 54% 93.1%, 55% 93.34%, 56% 93.58%, 57% 93.81%, 58% 94.03%, 59% 94.24%, 60% 94.43%, 61% 94.6%, 62% 94.74%, 63% 94.85%, 64% 94.93%, 65% 94.98%, 66% 95%, 67% 94.98%, 68% 94.93%, 69% 94.85%, 70% 94.73%, 71% 94.59%, 72% 94.42%, 73% 94.23%, 74% 94.02%, 75% 93.8%, 76% 93.56%, 77% 93.33%, 78% 93.09%, 79% 92.86%, 80% 92.63%, 81% 92.43%, 82% 92.24%, 83% 92.07%, 84% 91.93%, 85% 91.81%, 86% 91.73%, 87% 91.68%, 88% 91.67%, 89% 91.68%, 90% 91.74%, 91% 91.82%, 92% 91.94%, 93% 92.08%, 94% 92.25%, 95% 92.44%, 96% 92.65%, 97% 92.87%, 98% 93.11%, 99% 93.34%, 100% 93.58%);
-  z-index: -1;
   position: relative;
   height: 40vh;
-  background-color: #fafafa;
+  z-index: 4;
+  background-color: #e7e7e7;
   transform: translateY(-40%);
+  color: #212121;
 }
 .section__about .about__container {
   width: 100rem;
@@ -173,12 +217,54 @@ body {
 }
 
 .section__projects {
-  height: 50vh;
-  transform: translateY(-20%);
+  position: relative;
+  z-index: 3;
+  height: 80vh;
+  transform: translateY(-35%);
+  margin-bottom: -20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 3rem;
+  background-color: #f4f4f4;
+  clip-path: polygon(100% 0%, 0% 0%, 0% 91.67%, 1% 91.68%, 2% 91.73%, 3% 91.82%, 4% 91.93%, 5% 92.07%, 6% 92.24%, 7% 92.43%, 8% 92.64%, 9% 92.86%, 10% 93.1%, 11% 93.33%, 12% 93.57%, 13% 93.8%, 14% 94.03%, 15% 94.24%, 16% 94.43%, 17% 94.59%, 18% 94.74%, 19% 94.85%, 20% 94.93%, 21% 94.98%, 22% 95%, 23% 94.98%, 24% 94.93%, 25% 94.85%, 26% 94.73%, 27% 94.59%, 28% 94.42%, 29% 94.23%, 30% 94.02%, 31% 93.8%, 32% 93.57%, 33% 93.33%, 34% 93.09%, 35% 92.86%, 36% 92.64%, 37% 92.43%, 38% 92.24%, 39% 92.07%, 40% 91.93%, 41% 91.82%, 42% 91.73%, 43% 91.68%, 44% 91.67%, 45% 91.68%, 46% 91.74%, 47% 91.82%, 48% 91.93%, 49% 92.08%, 50% 92.25%, 51% 92.44%, 52% 92.65%, 53% 92.87%, 54% 93.1%, 55% 93.34%, 56% 93.58%, 57% 93.81%, 58% 94.03%, 59% 94.24%, 60% 94.43%, 61% 94.6%, 62% 94.74%, 63% 94.85%, 64% 94.93%, 65% 94.98%, 66% 95%, 67% 94.98%, 68% 94.93%, 69% 94.85%, 70% 94.73%, 71% 94.59%, 72% 94.42%, 73% 94.23%, 74% 94.02%, 75% 93.8%, 76% 93.56%, 77% 93.33%, 78% 93.09%, 79% 92.86%, 80% 92.63%, 81% 92.43%, 82% 92.24%, 83% 92.07%, 84% 91.93%, 85% 91.81%, 86% 91.73%, 87% 91.68%, 88% 91.67%, 89% 91.68%, 90% 91.74%, 91% 91.82%, 92% 91.94%, 93% 92.08%, 94% 92.25%, 95% 92.44%, 96% 92.65%, 97% 92.87%, 98% 93.11%, 99% 93.34%, 100% 93.58%);
+}
+
+.section__contacts {
+  position: relative;
+  height: 10rem;
+  margin: 5rem 0;
+  z-index: 2;
+}
+.section__contacts .contacts__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.section__contacts .contacts__link {
+  text-decoration: none;
+  color: #484848;
+  font-size: 1.5rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 3px solid #c7c7c7;
+  border-right: 3px solid #c7c7c7;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(72, 72, 72, 0.2);
+  transition: all 0.2s;
+}
+.section__contacts .contacts__link:hover {
+  letter-spacing: 1px;
+}
+.section__contacts .contacts__link:active {
+  border-bottom: 1px solid #c7c7c7;
+  border-left: 0px solid transparent;
+  border-right: 1px solid #c7c7c7;
+  border-top: 0px solid transparent;
+  margin-left: 2px;
+  margin-top: 2px;
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(72, 72, 72, 0.2);
 }
 
 /*# sourceMappingURL=output.css.map */

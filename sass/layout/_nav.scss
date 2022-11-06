@@ -25,3 +25,16 @@
     letter-spacing: 1px;
   }
 }
+
+.sticky {
+  position: sticky;
+  z-index: 500000;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to right bottom,
+    transparent 20%,
+    rgba($color-primary-light, 0.2) 40%,
+    $color-primary
+  );
+}

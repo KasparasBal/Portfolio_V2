@@ -6,6 +6,7 @@
   overflow: hidden;
   transition: all 0.3s;
   cursor: pointer;
+  background-color: $color-primary-light;
 
   &:hover {
     height: 45rem;

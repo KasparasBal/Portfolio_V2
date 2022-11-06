@@ -8,25 +8,30 @@
     <link rel="stylesheet" href="css/output.css" />
     <title>Kasparas Balys Portfolio</title>
   </head>
-  <body>
+  <body id="#home">
+    <nav class="nav">
+      <div class="nav__logo-container">
+        <img
+          class="nav__logo"
+          src="./img/logo_modern_oval.png"
+          alt="logo image"
+        />
+      </div>
+      <div class="nav__links">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#projects" class="nav__link">Projects</a>
+        <a href="#contacts" class="nav__link">Contacts</a>
+      </div>
+    </nav>
     <header class="hero">
-      <nav class="nav">
-        <div class="nav__logo-container">
-          <img
-            class="nav__logo"
-            src="./img/logo_modern_oval.png"
-            alt="logo image"
-          />
-        </div>
-        <div class="nav__links">
-          <a href="#" class="nav__link">About</a>
-          <a href="#" class="nav__link">Projects</a>
-          <a href="#" class="nav__link">Contacts</a>
-        </div>
-      </nav>
       <img class="hero__image" src="./img/keyboard_bold.png" alt="hero image" />
+      <h1 class="hero__title">
+        Kasparas <br />
+        Balys
+      </h1>
     </header>
-    <section class="section__about">
+    <section id="#about" class="section__about">
       <div class="about__container">
         <p class="about__description">
           Born in Lithuania, Trakai. I'm an artist turned developer. My passion
@@ -36,7 +41,7 @@
         </p>
       </div>
     </section>
-    <section class="section__projects">
+    <section id="#projects" class="section__projects">
       <div class="card">
         <img
           src="/img/projects/LoanShark.png"
@@ -101,19 +106,34 @@
         </div>
       </div>
     </section>
-    <section class="contacts"></section>
-    <footer class="footer">
-      <div class="footer_copyright"></div>
-      <div class="footer__links">
-        <a href="#">LinkedIn</a>
-        <a href="#">GitHub</a>
-        <a href="#">Instagram</a>
-        <a href="#">Email</a>
-        <a href="#">Email</a>
+    <section id="#contacts" class="section__contacts">
+      <div class="contacts__links">
+        <a
+          class="contacts__link"
+          target="_blank"
+          href="https://www.linkedin.com/in/kasparas-balys-947066223/"
+          >LinkedIn</a
+        >
+        <a class="contacts__link" target="_blank" href="./Kasparas Balys CV.pdf"
+          >Cv / resume</a
+        >
+        <a
+          href="mailto:kasparasbalys@gmail.com?subject=Inquiry"
+          target="_blank"
+          class="contacts__link"
+          >Email</a
+        >
+        <a
+          class="contacts__link"
+          target="_blank"
+          href="https://github.com/KasparasBal"
+          >GitHub</a
+        >
       </div>
-      <div class="footer_information">
-        <p>Email: KasparasBalys@gmail.com</p>
-        <p>Phone: +37063027462</p>
+    </section>
+    <footer class="footer">
+      <div class="footer_copyright">
+        <p>©2022 Kasparas Balys</p>
       </div>
     </footer>
   </body>

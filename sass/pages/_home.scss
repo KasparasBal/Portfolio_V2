@@ -1,13 +1,13 @@
 .section__about {
   @include clipPath;
 
-  z-index: -1;
   position: relative;
   height: 40vh;
-
-  background-color: $color-primary;
+  z-index: 4;
+  background-color: #e7e7e7;
 
   transform: translateY(-40%);
+  color: $color-secondary;
 
   .about__container {
     width: 100rem;
@@ -26,10 +26,61 @@
   }
 }
 .section__projects {
-  height: 50vh;
-  transform: translateY(-20%);
+  position: relative;
+  z-index: 3;
+  height: 80vh;
+  transform: translateY(-35%);
+  margin-bottom: -20%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 0 3rem;
+
+  background-color: #f4f4f4;
+
+  @include clipPath;
+}
+.section__contacts {
+  position: relative;
+  height: 10rem;
+  margin: 5rem 0;
+  z-index: 2;
+  .contacts__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+  .contacts__link {
+    text-decoration: none;
+    color: $color_secondary-light;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    border-bottom: 3px solid $color-primary-dark;
+
+    border-right: 3px solid $color-primary-dark;
+
+    box-shadow: 0.2rem 0.2rem 1rem rgba($color-secondary-light, 0.2);
+
+    transition: all 0.2s;
+
+    &:hover {
+      letter-spacing: 1px;
+    }
+
+    &:active {
+      border-bottom: 1px solid $color-primary-dark;
+      border-left: 0px solid transparent;
+      border-right: 1px solid $color-primary-dark;
+      border-top: 0px solid transparent;
+
+      margin-left: 2px;
+      margin-top: 2px;
+
+      box-shadow: 0.2rem 0.2rem 0.5rem rgba($color-secondary-light, 0.2);
+    }
+  }
 }
